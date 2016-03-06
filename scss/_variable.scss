@@ -1,0 +1,54 @@
+@import 'avalanchesass_component_hn/style_guide';
+
+$c-hn-namespace: '#{map-get($namespace, component)}h' !default;
+
+$c-hn-n: (
+  1: (
+    font-weight: bold,
+    font-size: xxxl,
+    font-family: a,
+    line-height: 1.25,
+  ),
+  2: (
+    font-weight: bold,
+    font-size: xxl,
+    font-family: a,
+    line-height: 1.25,
+  ),
+  3: (
+    font-weight: bold,
+    font-size: xl,
+    font-family: a,
+    line-height: 1.25,
+  ),
+  4: (
+    font-weight: bold,
+    font-size: l,
+    font-family: a,
+    line-height: 1.25,
+  ),
+  5: (
+    font-weight: bold,
+    font-size: m,
+    font-family: a,
+    line-height: inherit,
+  ),
+  6: (
+    font-weight: normal,
+    font-size: m,
+    font-family: a,
+    line-height: inherit,
+  ),
+) !default;
+/*---
+title:   Variable
+name:    component_hn_variable
+section: component_hn
+order:   3
+---
+
+```css
+$c-hn-namespace: '#{$c-hn-namespace}';
+$c-hn-n: (nested-map);
+```
+*/

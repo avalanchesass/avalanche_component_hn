@@ -1,0 +1,33 @@
+@import 'avalanchesass_component_hn/style_guide';
+@import 'avalanchesass_component_hn/variable';
+@import 'avalanchesass_component_hn/mixin';
+
+/* extract component.css */
+/* extract component_hn.css */
+@if length($c-hn-n) >= 1 {
+  /*---
+  title:   Example
+  name:    component_hn_example
+  section: component_hn
+  ---
+
+  Headline classes.
+
+```example:html
+<h1 class="c-h1">Headline 1</h1>
+<h2 class="c-h2">Headline 2</h2>
+<h3 class="c-h3">Headline 3</h3>
+<h4 class="c-h4">Headline 4</h4>
+<h5 class="c-h5">Headline 5</h5>
+<h6 class="c-h6">Headline 6</h6>
+```
+  */
+  @each $-n-data in $c-hn-n {
+    $-n: nth($-n-data, 1);
+    .#{$c-hn-namespace}#{$-n} {
+      @include c-h($-n);
+    }
+  }
+}
+/* end extract component_hn.css */
+/* end extract component.css */

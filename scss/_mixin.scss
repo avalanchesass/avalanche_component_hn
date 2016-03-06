@@ -1,0 +1,23 @@
+@import 'avalanchesass_function_map_get_deep';
+@import 'avalanchesass_component_hn/style_guide';
+
+/*---
+title:   Mixin
+name:    component_hn_mixin
+section: component_hn
+order:   2
+---
+
+```css
+c-h($-n: 1)
+```
+*/
+@mixin c-h($-n: 1) {
+  $-font-weight: map-get-deep($c-hn-n, $-n, font-weight);
+  $-font-size: map-get-deep($c-hn-n, $-n, font-size);
+  $-font-family: map-get-deep($c-hn-n, $-n, font-family);
+  font-weight: map-get-deep($fonts, $-font-family, weights, $-font-weight);
+  font-size: map-get($font-sizes, $-font-size);
+  font-family: unquote(map-get-deep($fonts, $-font-family, family));
+  line-height: map-get-deep($c-hn-n, $-n, line-height);
+}
